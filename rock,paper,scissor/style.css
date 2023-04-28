@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(65, 61, 61);
+    position: relative;
+}
+
+div.title{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+}
+
+div.score{
+    display: flex;
+    justify-content: center;
+}
+
+div.scoreboard{
+    margin-top: 20px;
+    padding: 5px;
+    background-color: rgb(65, 61, 61);
+    border: 5px solid #fff;
+    border-radius: 8px;
+    width: 300px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.scoreboard div.p1score{
+    color: #fff;
+    font-size: 100px;
+    
+}
+
+div.scoreboard div.scorepartition{
+    color: #fff;
+    font-size: 100px;
+}
+
+div.scoreboard div.p2score{
+    color: #fff;
+    font-size: 100px;
+}
+
+div.user{
+    padding: 2px;
+    background-color: red;
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+
+div.comp{
+    padding: 2px;
+    background-color: red;
+    columns: #fff;
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    top: 100px;
+    right: 10px;
+}
+
+div.result{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 35px;
+}
+
+div.game{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+div.game div.rock{
+    margin: 10px;
+    width: 100px;
+}
+div.game div.paper{
+    margin: 10px;
+    width: 100px;
+}
+div.game div.scissor{
+    margin: 10px;
+    width: 100px;
+}
+div.game img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+div.game button{
+    border-radius: 50%;
+}
+
+div.game button:hover{
+    cursor: pointer;
+}
+
+div.msg{
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
