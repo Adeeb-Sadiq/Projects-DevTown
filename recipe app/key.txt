@@ -1,0 +1,6 @@
+`https://api.edamam.com/api/recipes/v2?type=public&q=${searchstring}&app_id=6f7ca9d9&app_key=ff6aeccf1295b3e8245c4e2122df3dcf`
+
+application id = 6f7ca9d9
+application key = ff6aeccf1295b3e8245c4e2122df3dcf
+
+`https://api.edamam.com/api/recipes/v2?type=public&q=${searchstring}&app_id=${app_id}&app_key=${app_key}`

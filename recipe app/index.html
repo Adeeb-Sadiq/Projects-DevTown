@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe api</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader" class="h-screen w-screen bg-black text-white hidden justify-center items-center opacity-50 z-50 absolute top-0 left-0"> 
+        <div class="flex space-x-2 animate-pulse">
+            <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+        </div>
+    </div>
+    <div class="searcharea bg-yellow-200 h-48 flex justify-center items-center">
+        <div class="wrapper bg-white h-2/5 rounded-2xl flex items-center">
+            <input id="input" type="text" placeholder="Search for recipes" class="ml-4 outline-0 text-yellow-600 text-xl grow">
+            <button id="search" class="text-xl mr-4 bg-yellow-300 p-2 rounded-2xl">Search</button>
+        </div>
+    </div>
+    <div id="container" class="cards flex flex-wrap">
+        <div class="w-72 bg-indigo-50 px-4 p-3 m-3">
+            <div>
+              <img src="https://media.torque.com.sg/public/2019/03/Bugatti-Chiron-front-exterior-4.jpg" class="h-auto w-full" />
+              <div class="p-5">
+                <div class="bold text-xl">title</div>
+                <p class="text-medium mb-5 text-gray-700">Well, aren't you going up to the lake tonight, you've been planning it for two weeks.</p>
+                <button id="info" class="w-full rounded-md bg-yellow-300 text-xl py-2">Details</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
