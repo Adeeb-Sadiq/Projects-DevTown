@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather details</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-300 font-serif">
+    <div class="heading bg-blue-400 h-24 flex justify-center items-center p-5">
+        <h1 class="text-white text-4xl absolute left-2">🌤️Weather</h1>
+        <input id="searchbox" type="text" placeholder="e.x: bangalore" class="rounded-lg outline-none bg-gray-300 text-gray-600 border-2 border-white p-2 absolute">
+        <button id="searchbutton" class="relative left-36 text-gray-600 bg-gray-300 p-2 rounded-lg border-2 border-white">Search</button>
+    </div>
+
+    <div id="container" class="flex justify-center mt-12 mx-10 flex-wrap">
+        <div class="card bg-white w-96 flex flex-col items-center p-2">
+            location access needed
+        <!-- card -->
+        </div>
+    <!-- container -->
+    </div>
+</body>
+</html>

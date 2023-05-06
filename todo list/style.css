@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: hsla(276, 80%, 31%, 1);
+
+background: linear-gradient(45deg, hsla(276, 80%, 31%, 1) 25%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -moz-linear-gradient(45deg, hsla(276, 80%, 31%, 1) 25%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -webkit-linear-gradient(45deg, hsla(276, 80%, 31%, 1) 25%, hsla(0, 0%, 100%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5C108E", endColorstr="#FFFFFF", GradientType=1 ); */
+
+    height: 100vh;
+
+}
+
+.contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head{
+    background-color: yellow;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insertion {
+    background-color: #fff;
+    /* height: 120px; */
+    width: 400px;
+    height: 200px;
+    border-radius: 8px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.addvalue {
+    margin-top: 15px;
+    height: 25px;
+    color: #000;
+    outline: none;
+    border-radius: 50px;
+    padding: 2px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.additem{
+    width: 42%;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.container{
+    background-color: #fff;
+    margin-top: 30px;
+    /* height: 100vh; */
+    width: 400px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 25px;
+    color: #000;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.dcontainer{
+    background-color: #fff;
+    margin-top: 30px;
+    /* height: 100vh; */
+    width: 400px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 25px;
+    color: #000;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

@@ -1,4 +1,7 @@
 //variables
+const list = []
+const dlist = []
+//selectors
 const input = document.querySelector('.addvalue')
 const button = document.querySelector('.additem')
 const content = document.querySelector('.container')
@@ -6,8 +9,6 @@ const dcontent = document.querySelector('.dcontainer')
 const editbutton = document.querySelector('#edit')
 editbutton.style = 'display: none'
 
-const list = []
-const dlist = []
 
 let idofelementtodelete = null
 
@@ -22,6 +23,7 @@ const handleadd = () => {
             id: Date.now(),
         })
         renderlist()
+        updatastorage()
         return
     }
     else{
@@ -45,6 +47,8 @@ const renderlist = () => {
             const id = ele.id
             const index = list.findIndex(ele => ele.id == id)
             list.splice(index,1)
+            updatastorage()
+
         })
 
         const ebutton = document.createElement('button')
@@ -73,17 +77,15 @@ const renderlist = () => {
         `
 
         dbutton.style = `
-        border: 3px solid #432371;
-        background-color: #432371;
-        color: #fff;
+        border: 3px solid yellow;
+        background-color: yellow;
         position: absolute;
         right: 1px;
         `
 
         ebutton.style = `
-        border: 3px solid #432371;
-        background-color: #432371;
-        color: #fff;
+        border: 3px solid yellow;
+        background-color: yellow;
         position: absolute;
         right: 45px;
         `
@@ -91,7 +93,6 @@ const renderlist = () => {
         done.style= `
         border: 3px solid green;
         background-color: green;
-        color: #fff;
         position: absolute;
         right: 73px;
         `
@@ -104,6 +105,8 @@ const showedit = (id) => {
     button.style = 'display: none'
     editbutton.style = 'display: inline'
     idofelementtodelete = id
+    updatastorage()
+
 }
 
 const handleedit = (e) => {
@@ -114,6 +117,8 @@ const handleedit = (e) => {
     button.style = 'display: inline'
     editbutton.style = 'display: none'
     input.value = ''
+    updatastorage()
+
 }
 
 const handledone = (ele) => {
@@ -123,6 +128,8 @@ const handledone = (ele) => {
         id: Date.now(),
     })
     renderdlist()
+    updatastorage()
+
 }
 
 const renderdlist = () => {
@@ -142,6 +149,8 @@ const renderdlist = () => {
             const id = ele.id
             const index = dlist.findIndex(ele => ele.id == id)
             dlist.splice(index,1)
+        updatastorage()
+
         })
             // styles
         li.style = `
@@ -158,6 +167,65 @@ const renderdlist = () => {
     })
 }
 
+const updatastorage = () => {
+    const store = JSON.stringify(list)
+    localStorage.setItem('arr',store)
+    
+    const dstore = JSON.stringify(dlist)
+    localStorage.setItem('darr',dstore)
+}
+
+const initialize = () => {
+    if(!localStorage.getItem('arr')){
+        updatastorage()
+    }
+
+
+    console.log('reload page if error')
+    const data = localStorage.getItem('arr')
+    const finaldata = JSON.parse(data)
+
+    const ddata = localStorage.getItem('darr')
+    const dfinaldata = JSON.parse(ddata)
+    
+    updatastorage()
+    reload(finaldata)
+    dreload(dfinaldata)
+    updatastorage()
+
+}
+
+const reload = (obj) => {
+    obj.forEach((ele) => {
+        list.push({
+            text:ele.text,
+            completed: ele.completed,
+            id: ele.id,
+        })
+    })  
+    renderlist()
+}
+const dreload = (obj) => {
+    obj.forEach((ele) => {
+        dlist.push({
+            text:ele.text,
+            completed: ele.completed,
+            id: ele.id,
+        })
+    })  
+    renderdlist()
+}
+
+// setInterval(() => {
+//     const store = JSON.stringify(list)
+//     localStorage.setItem('arr',store)
+//     const dstore = JSON.stringify(dlist)
+//     localStorage.setItem('darr',dstore)
+// }, 20000);
+
+
 //main
+// window.alert('reload the page twice')
+initialize()
 button.addEventListener('click',handleadd)
-editbutton.addEventListener('click', handleedit)
+editbutton.addEventListener('click', handleedit) 

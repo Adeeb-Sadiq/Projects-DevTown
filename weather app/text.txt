@@ -1,0 +1,5 @@
+`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
+`https://api.openweathermap.org/data/2.5/weather?lat=13&lon=77&appid=a08025cfd05864b937eb9480968ac082`
+
+
+key = 'a08025cfd05864b937eb9480968ac082'
